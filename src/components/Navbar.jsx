@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <nav>
       <a className="nav-brand" href="#home" aria-label="Go to home">
-        <span className="dot" />
+        <span>SJ</span>
         Shalu Jawla
       </a>
       <ul className="nav-links">

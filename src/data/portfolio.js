@@ -1,129 +1,150 @@
 export const profile = {
   name: "Shalu Jawla",
-  title: "Software Developer",
+  title: "Software Development Engineer",
+  tagline: "Cloud-ready full-stack apps, practical backend systems, and client-facing delivery.",
   location: "Noida, Uttar Pradesh, India",
   email: "jawlashalu6@gmail.com",
   phone: "9368107932",
   linkedin: "https://linkedin.com/in/shalu-jawla-3b8366238",
   hackerRank: "https://www.hackerrank.com/profile/jawlashalu6",
+  github: "https://github.com/Shalu37",
   summary:
-    "Software Developer with 1.5+ years across three teams — building secure APIs in Java & Spring Boot, full-stack features in Node.js and React, and now containerizing and deploying them with Docker and AWS.",
+    "Software Development Engineer with 2 years of experience building full-stack, cloud-ready applications in Node.js, Spring Boot, Java, and React. I work across SQL and NoSQL databases, Docker, Kubernetes basics, CI/CD, and client-facing delivery - turning real requirements into systems that hold up in production.",
 };
 
-export const metrics = [
-  ["1.5+ yrs", "Experience"],
-  ["3", "Organizations"],
-  ["10+", "APIs shipped"],
-  ["~25%", "Fewer prod bugs"],
-];
-
-export const stack = [
-  "Java · Core + Streams",
-  "Spring Boot · REST & Security",
-  "Node.js · Runtime",
-  "NestJS · Modular APIs",
-  "React · Frontend",
-  "MongoDB · Schema Design",
-  "MySQL · Relational",
-  "Docker · Containers",
-  "AWS · S3 · EC2",
-  "Git · Version Control",
+export const highlights = [
+  ["2 yrs", "Full-stack engineering experience"],
+  ["5+", "Enterprise client projects"],
+  ["15+", "Production releases coordinated"],
+  ["20%", "Average API response-time reduction"],
+  ["25%", "Reduction in post-release bugs"],
+  ["30%", "MongoDB query-performance improvement"],
 ];
 
 export const experience = [
   {
-    role: "Software Developer — Product Development",
-    org: "@ SuperHumanRace",
-    meta: "Nov 2024 — Present · Delhi, India",
-    nodes: ["spring", "node", "docker"],
+    role: "Software Developer",
+    org: "SuperHumanRace",
+    meta: "Nov 2024 - Present",
+    place: "Delhi, India",
     bullets: [
-      "Design and build full-stack solutions spanning backend (PHP, Java/Spring Boot, Node.js) and frontend (HTML, CSS, JavaScript, React) for 5+ enterprise clients across diverse industries.",
-      "Architect technical solutions and write clean, optimized, well-debugged code — cutting production bugs by ~25% and average API response time by ~20%.",
-      "Containerize services with Docker for consistent local and deployment environments; coordinate 15+ production releases across cross-functional teams.",
+      "Build and maintain full-stack features for 5+ enterprise clients across PHP, Java/Spring Boot, Node.js, Python, React, jQuery, Ajax, MySQL, and PostgreSQL.",
+      "Act as a technical point of contact on client calls, gather requirements, and translate them into realistic build plans.",
+      "Improved API response times by about 20% and reduced post-release bugs by roughly 25% through cleaner code and unit testing with JUnit and Jest.",
+      "Coordinate distributed teams through 15+ production releases using GitHub Actions CI/CD pipelines.",
     ],
-    tags: ["Spring Boot", "Node.js", "React", "Docker"],
+    tags: ["Spring Boot", "Node.js", "React", "Python", "PostgreSQL", "CI/CD"],
   },
   {
-    role: "SDE-1 — Trainee",
-    org: "@ NBCS Technologies",
-    meta: "Sep 2024 — Oct 2024 · Noida, India · Loan Application System",
-    nodes: ["node", "mongo"],
+    role: "SDE-1 Trainee",
+    org: "NBCS Technologies Pvt. Ltd.",
+    meta: "Sep 2024 - Oct 2024",
+    place: "Noida, India",
     bullets: [
-      "Built backend modules for user authentication, loan management, and payments across 3 core workflows.",
-      "Designed and optimized MongoDB schemas for efficient CRUD operations, improving query performance by ~30%.",
-      "Built 10+ secure RESTful APIs using NestJS and TypeScript with proper validation and modular architecture.",
+      "Worked on authentication and payment modules across 3 product workflows using Node.js and SQL/NoSQL databases.",
+      "Optimized MongoDB schemas and improved query performance by around 30%.",
+      "Built and tested 10+ RESTful APIs with validation and modular code, reducing duplicate logic by roughly 15%.",
     ],
-    tags: ["NestJS", "TypeScript", "MongoDB"],
+    tags: ["Node.js", "MongoDB", "REST APIs", "Payments", "Authentication"],
   },
   {
-    role: "SDE-1 — Intern",
-    org: "@ Bharti Airtel",
-    meta: "Jan 2024 — Jul 2024 · Gurgaon, India · Botpress Chatbot Integration",
-    nodes: ["spring", "rest"],
+    role: "SDE-1 Intern",
+    org: "Bharti Airtel",
+    meta: "Jan 2024 - Jul 2024",
+    place: "Gurgaon, India",
     bullets: [
-      "Built a knowledge-based chatbot using Botpress handling 20+ query categories with real-time responses.",
-      "Integrated the chatbot with a Spring Boot backend via REST APIs.",
-      "Implemented dynamic response generation, improving resolution accuracy by ~35%.",
+      "Built a knowledge-based conversational system connected to a Java/Spring Boot backend through REST APIs.",
+      "Handled 20+ query categories with real-time responses and improved resolution accuracy by about 35%.",
+      "Helped auto-resolve close to 40% of queries without human intervention.",
     ],
-    tags: ["Spring Boot", "REST APIs"],
+    tags: ["Java", "Spring Boot", "Botpress", "MySQL", "REST APIs"],
   },
 ];
 
 export const projects = [
   {
-    title: "Noisy Notes",
+    title: "Concurrent Banking Transaction Engine",
+    type: "Backend system",
+    stack: "Java, Spring Boot, PostgreSQL, JPA/JDBC, JUnit, Docker",
     description:
-      "Music e-commerce platform with authentication, product listings, and cart functionality across 100+ listings — containerized for consistent deployment.",
-    stack: "HTML5, CSS3, JS, PHP, MySQL",
-    focus: "Order & user logic, responsive UI",
-    tags: ["backend", "frontend", "cloud"],
-    chips: ["MySQL", "Docker"],
+      "A bank-grade transaction engine that safely handles simultaneous withdrawal requests without incorrect balances.",
+    impact:
+      "Uses row-level locking, transactions, isolation tuning, rollback handling, audit logs, and JUnit integration tests for concurrency scenarios.",
+    tags: ["backend", "database", "docker", "testing"],
+  },
+  {
+    title: "Smart Database Query Optimizer",
+    type: "Full-stack tool",
+    stack: "Java, Spring Boot, PostgreSQL, JDBC, REST API, Docker",
+    description:
+      "A tool that parses SQL queries, reads live PostgreSQL table statistics and indexes, and recommends composite indexes.",
+    impact:
+      "Includes EXPLAIN ANALYZE plans, query history dashboard, REST APIs, and Docker Compose setup.",
+    tags: ["backend", "database", "docker", "frontend"],
+  },
+  {
+    title: "Instant Loan Management System",
+    type: "Backend product",
+    stack: "Node.js, MongoDB, JWT",
+    description:
+      "Designed and built the backend for authentication, payments, and the full API layer, mostly solo.",
+    impact:
+      "Added JWT-based auth and reworked MongoDB schemas so CRUD operations ran about 30% faster.",
+    tags: ["backend", "database", "auth"],
+  },
+  {
+    title: "Botpress Chatbot Integration",
+    type: "AI workflow integration",
+    stack: "Java, Spring Boot, MySQL, Botpress",
+    description:
+      "Knowledge-base chatbot connected to a Spring Boot backend through REST APIs for real-time support flows.",
+    impact:
+      "Covered 20+ query categories, improved resolution accuracy by about 35%, and auto-resolved close to 40% of queries.",
+    tags: ["backend", "ai", "database"],
+  },
+  {
+    title: "SuperHumanRace Platform",
+    type: "Production platform",
+    stack: "React, Node.js, Java/Spring Boot, REST APIs",
+    description:
+      "Worked across frontend and backend for a multi-product platform covering CSR, ESG, and EE solutions.",
+    impact:
+      "Built user-facing features, backend logic, and API integrations so data flowed cleanly between client and server.",
+    tags: ["frontend", "backend", "production"],
+  },
+  {
+    title: "Noisy Notes",
+    type: "Music website",
+    stack: "HTML5, CSS3, JavaScript, PHP, MySQL, Docker",
+    description:
+      "A responsive music site with authentication, music listings, add-to-favorites, and subscription-plan support.",
+    impact:
+      "Backed by 6 core SQL tables and containerized with Docker for reproducible setup.",
+    tags: ["frontend", "backend", "database", "docker"],
   },
   {
     title: "Face Heaven",
+    type: "Organic e-commerce platform",
+    stack: "HTML5, CSS3, JavaScript, PHP, MySQL, AWS S3",
     description:
-      "Organic e-commerce platform with secure transaction workflows, role-based admin dashboards, and image storage on AWS S3.",
-    stack: "HTML5, CSS3, JS, PHP, MySQL",
-    focus: "Admin dashboards, 3-tier access control",
-    tags: ["backend", "cloud"],
-    chips: ["AWS S3", "RBAC"],
-  },
-  {
-    title: "Currency Converter",
-    description:
-      "Real-time currency conversion across 150+ pairs, rebuilt with a React front end for instant updates without page reloads.",
-    stack: "Java, REST APIs, React",
-    focus: "Third-party API integration, live UI state",
-    tags: ["backend", "frontend"],
-    chips: ["React", "REST"],
+      "E-commerce workflows with secure transactions, admin dashboards, and role-based access for admin, vendor, and customer users.",
+    impact:
+      "Used AWS S3 for product images and reduced manual order-tracking work by about 40%.",
+    tags: ["frontend", "backend", "cloud", "database"],
   },
 ];
 
-export const skillLayers = [
-  ["01", "Languages", ["Java", "JavaScript", "TypeScript", "PHP", "C++"]],
-  ["02", "Frameworks & Libraries", ["Spring Boot", "Node.js", "NestJS", "Express.js", "React"]],
-  ["03", "Databases", ["MySQL", "MongoDB"]],
-  ["04", "Cloud & DevOps", ["AWS S3", "AWS EC2", "Docker", "Git", "GitHub Actions"]],
-  ["05", "Architecture & Concepts", ["REST APIs", "Microservices", "OOP", "MVC", "JWT Auth", "Design Patterns"]],
-];
-
-export const skillBars = [
-  ["Java / Spring Boot", 90],
-  ["Node.js / NestJS", 85],
-  ["MongoDB / MySQL", 80],
-  ["React", 65],
-  ["Docker / AWS", 55],
+export const skillGroups = [
+  ["Languages", ["Java", "JavaScript", "TypeScript", "Python", "PHP", "C++"]],
+  ["Backend & Cloud", ["Node.js", "NestJS", "Express.js", "Spring Boot", "RESTful APIs", "Microservices"]],
+  ["Databases", ["MySQL", "PostgreSQL", "MongoDB", "Redis"]],
+  ["Frontend", ["React", "HTML5", "CSS3", "JavaScript", "jQuery", "Ajax"]],
+  ["DevOps", ["Docker", "Kubernetes basics", "CI/CD", "GitHub Actions", "Git"]],
+  ["Architecture & Practices", ["System Design", "MVC", "JWT Authentication", "Design Patterns", "Agile/Scrum"]],
+  ["Testing & Tools", ["JUnit", "Mockito", "Jest", "Postman", "Maven"]],
 ];
 
 export const education = [
-  ["2024", "Master of Computer Applications (MCA)", "Banasthali University, Jaipur"],
-  ["2022", "Bachelor of Computer Applications (BCA)", "Banasthali University, Jaipur"],
+  ["2024", "Master of Computer Applications", "Banasthali University, Jaipur"],
+  ["2022", "Bachelor of Computer Applications", "Banasthali University, Jaipur"],
 ];
-
-export const terminalResponses = {
-  whoami: "Shalu Jawla — Software Developer, 1.5+ yrs. Java · Spring Boot · Node.js · React. Based in Noida, India.",
-  skills: "Languages: Java, JavaScript, TypeScript, PHP\nFrameworks: Spring Boot, Node.js, NestJS, React\nDatabases: MySQL, MongoDB\nCloud/DevOps: AWS (S3, EC2), Docker",
-  experience: "SuperHumanRace — Software Developer (Nov 2024–Present)\nNBCS Technologies — SDE-1 Trainee (Sep–Oct 2024)\nBharti Airtel — SDE-1 Intern (Jan–Jul 2024)",
-  contact: "email: jawlashalu6@gmail.com\nphone: 9368107932\nlinkedin: linkedin.com/in/shalu-jawla-3b8366238",
-  help: "Try: whoami, skills, experience, contact, clear",
-};
