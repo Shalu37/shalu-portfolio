@@ -9,11 +9,11 @@ export const profile = {
   hackerRank: "https://www.hackerrank.com/profile/jawlashalu6",
   github: "https://github.com/Shalu37",
   summary:
-    "Software Development Engineer with 2 years of experience building full-stack, cloud-ready applications in Node.js, Spring Boot, Java, and React. I work across SQL and NoSQL databases, Docker, Kubernetes basics, CI/CD, and client-facing delivery - turning real requirements into systems that hold up in production.",
+    "Software Development Engineer with 2+ years of experience building full-stack, cloud-ready applications in Node.js, Spring Boot, Java, and React. I work across SQL and NoSQL databases, Docker, Kubernetes basics, CI/CD, and client-facing delivery - turning real requirements into systems that hold up in production.",
 };
 
 export const highlights = [
-  ["2 yrs", "Full-stack engineering experience"],
+  ["2+ yrs", "Full-stack engineering experience"],
   ["5+", "Enterprise client projects"],
   ["15+", "Production releases coordinated"],
   ["20%", "Average API response-time reduction"],
