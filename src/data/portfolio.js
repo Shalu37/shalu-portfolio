@@ -25,7 +25,7 @@ export const experience = [
   {
     role: "Software Developer",
     org: "SuperHumanRace",
-    meta: "Nov 2024 - Present",
+    meta: "Nov 2024 - Sept 2026",
     place: "Delhi, India",
     bullets: [
       "Build and maintain full-stack features for 5+ enterprise clients across PHP, Java/Spring Boot, Node.js, Python, React, jQuery, Ajax, MySQL, and PostgreSQL.",
