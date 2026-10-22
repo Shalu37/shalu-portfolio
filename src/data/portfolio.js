@@ -1,7 +1,7 @@
 export const profile = {
   name: "Shalu Jawla",
   title: "Software Development Engineer",
-  tagline: "Cloud-ready full-stack apps, practical backend systems, and client-facing delivery.",
+  tagline: "I build useful software, from the first client conversation to the production release.",
   location: "Noida, Uttar Pradesh, India",
   email: "jawlashalu6@gmail.com",
   phone: "9368107932",
@@ -9,7 +9,7 @@ export const profile = {
   hackerRank: "https://www.hackerrank.com/profile/jawlashalu6",
   github: "https://github.com/Shalu37",
   summary:
-    "Software Development Engineer with 2+ years of experience building full-stack, cloud-ready applications in Node.js, Spring Boot, Java, and React. I work across SQL and NoSQL databases, Docker, Kubernetes basics, CI/CD, and client-facing delivery - turning real requirements into systems that hold up in production.",
+    "I’m a software developer with 2+ years of experience across backend and full-stack work. Most days that means building APIs, working through data and performance problems, or coordinating a release with the people who will use what we ship. My main tools are Java, Spring Boot, Node.js, React, and SQL/NoSQL databases.",
 };
 
 export const highlights = [

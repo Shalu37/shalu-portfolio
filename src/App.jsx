@@ -47,6 +47,7 @@ function App() {
   const [filter, setFilter] = useState("all");
   const [copied, setCopied] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const revealEls = document.querySelectorAll(".reveal");
@@ -67,6 +68,13 @@ function App() {
     });
     return () => observer.disconnect();
   }, [filter]);
+
+  useEffect(() => {
+    if (!selectedProject) return undefined;
+    const closeOnEscape = (event) => event.key === "Escape" && setSelectedProject(null);
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [selectedProject]);
 
   useEffect(() => {
     const update = () => {
@@ -107,16 +115,17 @@ function App() {
             <p className="hero-title">{profile.tagline}</p>
             <p className="hero-summary">{profile.summary}</p>
             <div className="hero-actions">
-              <a className="btn primary" href="#projects">View projects <ArrowUpRight size={17} /></a>
+              <a className="btn primary" href="#projects">See what I have built <ArrowUpRight size={17} /></a>
+              <a className="btn quiet" href={`${import.meta.env.BASE_URL}Shalu_Jawla_Resume.pdf`} download="Shalu_Jawla_Resume.pdf"><ArrowUpRight size={16} /> Download resume</a>
               <button className="btn quiet" onClick={copyEmail}><Mail size={16} /> Copy email</button>
             </div>
           </div>
 
           <aside className="profile-card reveal" aria-label="Profile snapshot">
-            <div className="portrait">SJ</div>
+              <div className="portrait">SJ</div>
             <div>
               <p className="card-kicker">Current focus</p>
-              <h2>Shipping reliable features from client call to production release.</h2>
+              <h2>From a client question to a feature in production.</h2>
             </div>
             <div className="contact-stack">
               <a href={`mailto:${profile.email}`}><Mail size={15} /> {profile.email}</a>
@@ -138,8 +147,8 @@ function App() {
         <section id="experience">
           <SectionHeader
             eyebrow="Experience"
-            title="A practical engineering path"
-            copy="The common thread across these roles is ownership: understanding the problem, building the system, testing it, and helping it reach users."
+            title="Where I have worked"
+            copy="I have worked on enterprise products, APIs, and support tools. I like being close to the problem and staying involved through testing and release."
           />
           <div className="experience-list">
             {experience.map((item) => (
@@ -167,8 +176,8 @@ function App() {
         <section id="projects">
           <SectionHeader
             eyebrow="Projects"
-            title="Selected work from the resume"
-            copy="A mix of production platform work, backend systems, database-heavy tools, and classic full-stack builds."
+            title="A few things I have built"
+            copy="Filter by the kind of work you are interested in. Open any card for a little more context."
           />
           <div className="filter-row reveal">
             {projectFilters.map((value) => (
@@ -176,6 +185,7 @@ function App() {
                 key={value}
                 className={`filter-btn ${filter === value ? "active" : ""}`}
                 onClick={() => setFilter(value)}
+                aria-pressed={filter === value}
               >
                 {value === "all" ? "All work" : value}
               </button>
@@ -184,7 +194,7 @@ function App() {
           <div className="project-grid">
             {filteredProjects.map((project, index) => (
               <Reveal key={project.title}>
-                <article className={`project-card ${index === 0 ? "featured" : ""}`}>
+                <button className={`project-card ${index === 0 ? "featured" : ""}`} onClick={() => setSelectedProject(project)} aria-label={`More about ${project.title}`}>
                   <div className="project-meta">
                     <span>{project.type}</span>
                     <span>{String(index + 1).padStart(2, "0")}</span>
@@ -193,7 +203,7 @@ function App() {
                   <p>{project.description}</p>
                   <div className="project-impact">{project.impact}</div>
                   <div className="stack-line">{project.stack}</div>
-                </article>
+                </button>
               </Reveal>
             ))}
           </div>
@@ -255,8 +265,20 @@ function App() {
         </section>
       </main>
 
-      <footer>{profile.location} - React + Vite portfolio for {profile.name}</footer>
+      <footer>{profile.location} | {profile.name}</footer>
       {copied && <div className="copy-toast" role="status">Email copied</div>}
+      {selectedProject && (
+        <div className="modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && setSelectedProject(null)}>
+          <section className="project-dialog" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title">
+            <button className="dialog-close" onClick={() => setSelectedProject(null)} aria-label="Close project details">×</button>
+            <p className="card-kicker">{selectedProject.type}</p>
+            <h2 id="project-dialog-title">{selectedProject.title}</h2>
+            <p>{selectedProject.description}</p>
+            <p>{selectedProject.impact}</p>
+            <div className="stack-line">{selectedProject.stack}</div>
+          </section>
+        </div>
+      )}
     </>
   );
 }
